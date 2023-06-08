@@ -4,9 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home || Company Profile</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <header>
+        <img src="assets/logo-revou.png" alt="Revou Logo" class="logo">
+        <div class="nav-bar">
+            <div class="nav-item"><a href="#">Home</a></div>
+            <div class="nav-item"><a href="profile.html">Our Profile</a></div>
+            <div class="nav-item">Portofolio</div>
+            <div class="nav-item">Message Us</div>
+        </div>
+    </header>
+
+    <div id="hero-section" class="hero">
+        <h1>Hi Azmi, Welcome to Website<span id="nama"></span></h1>
+        <p>Ini adalah website latihan pertama</p>
+        <!-- <img src="" alt="Hero.img"> -->
+    </div>
+
+    <!-- <script>
+        var name = prompt("Masukkan nama kamu");
+        // console.log(nama);
+
+        // ambil dari span ID di bagian h1 nama
+        // ini hanya mengeksekusi getelementbyid tanpa menyetor nilai kemana2
+        document.getElementById("nama").innerText = name;
+
+        // kita ngecek behavior dari sebuah kode yang kita buat. buat debugging dari variabel dari yag kita ingin tahu, semisal ini element.
+        // console.log(element);
+    </script> -->
+
+    <div id="headquarters-section">
+        <h1>Headquarters</h1>
+        <div class="wrapper">
+            <div class="headquarters-image-container">
+                <div class="headquarters-image">
+                    <img src="https://img.okezone.com/content/2021/06/22/406/2428927/6-fakta-menarik-jakarta-15-kali-ganti-nama-hingga-jadi-kota-termahal-di-dunia-Wxp8tPuw8t.jpg" alt="">
+                </div>
+                <p>Jakarta</p>
+            </div>
+            <div class="headquarters-image-container">
+                <div class="headquarters-image">
+                    <img src="https://ebtke.esdm.go.id/images/b84ae25f1ab45e6f5c37e56c22e11bf1_p.jpeg" alt="">
+                </div>
+                <p>Bandung</p>
+            </div>
+            <div class="headquarters-image-container">
+                <div class="headquarters-image">
+                    <img src="https://tourism.surabaya.go.id/storage/tour/1654138842_1.jpg" alt="">
+                </div>
+                <p>Surabaya</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h1>Message Us</h1>
+        <div class="container">
+            <form 
+                class="message-form"
+                name="message-form"
+                onsubmit="return ValidityForm()"
+            >
+                <div class="row">
+                    <div class="col-34">
+                        <label for="fname">Nama</label>
+                    </div>
+                    <div class="col-5">
+                        <label for=":">:</label>
+                    </div>
+                    <div class="col-50">
+                        <input class="input" placeholder="Nama" type="text" name="full-name" />
+                    </div>
+                </div>
+                <br />
     
+                <div class="row">
+                    <div class="col-34">
+                        <label for="ftanggal-lahir">Tanggal Lahir</label>
+                    </div>
+                    <div class="col-5">
+                        <label for=":">:</label>
+                    </div>
+                    <div class="col-50">
+                        <input class="input" type="date" name="birth-date" />
+                    </div>
+                </div>
+                <br />
+    
+                <div class="row">
+                    <div class="col-34">
+                        <label for="fjenis-kelamin">Jenis Kelamin</label>
+                    </div>
+                    <div class="col-5">
+                        <label for=":">:</label>
+                    </div>
+                    <div class="col-50">
+                        <input type="radio" id="male" name="gender" value="Laki-laki" />
+                        <label for="male">Laki-laki</label>
+                        <input type="radio" name="gender" id="female" value="Perempuan" />
+                        <label for="female">Perempuan</label>
+                    </div>
+                </div>
+                <br />
+    
+                <div class="row">
+                    <div class="col-34">
+                        <label for="fpesan">Pesan</label>
+                    </div>
+                    <div class="col-5">
+                        <label for=":">:</label>
+                    </div>
+                    <div class="col-50">
+                        <textarea class="textarea" placeholder="Pesan" name="messages"></textarea>
+                    </div>
+                </div>
+                <br />
+    
+                <div class="row">
+                    <input class="submit" type="submit" value="Submit">
+                </div>
+            </form>
+    
+            <div class="form-output">
+                <div class="column">
+                    <p><b>Current Time:</b> <span id="current-time"></span></p>
+                    <p><b>Nama:</b> <span id="sender-full-name"></span></p>
+                    <p><b>Tanggal Lahir:</b> <span id="sender-birth-date"></span></p>
+                    <p><b>Jenis Kelamin:</b> <span id="sender-gender"></span></p>
+                    <p><b>Pesan:</b> <span id="sender-messages"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/currentTime.js"></script>
+
+    <footer><p>Created by RevoU</p></footer>
 </body>
 </html>
